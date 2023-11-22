@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Zedi Foundation</title>
+    <link rel="icon"  type="UI/img/logo.png">
+    <link rel="stylesheet" href="style1.css">
+    </head>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+        @import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
+* {
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding:0;
+}
+/*Navbar & Header Section*/
+.header{
+    height: 100px; 
+}
+.section {
+    clear: both;
+    border:1px solid #ddd;
+    padding:20px 0;
+    background-color: #eee;
+    height:auto;
+    overflow: hidden;   
+}
+.logo {
+    float:left;
+    background-color: white;
+    color:white;
+    width:130px;
+    height:87px;
+    margin-left: 10px;
+    text-align: left;
+    line-height: 50px;
+}
+.logo img{
+    width: 130px;
+    height: 87px;
+}
+
+nav ul{
+    float:right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+}
+nav ul li{
+    float: left;
+    position: relative;
+}
+nav ul li a{
+    padding: 15px;
+    text-decoration: none;
+    color:white;
+    font-size: 1.5em;
+}
+nav ul li:hover a{
+    background-color: white;
+    color:black;
+}
+.mainHeader{
+    position: fixed;
+    left:0;
+    top:0;
+    height: 100px;
+    background-color: #000;
+    width: 100%;
+    z-index: 10;
+    padding:5px;
+}
+/*End*/
+
+.sec::before{
+    content: " ";
+    height: 50px;
+    display: block;
+}
+
+    /*image gallery*/
+.container{
+    padding: 5px;
+    min-height:100px;
+    position: relative;
+    margin:0 auto;
+    overflow: hidden;
+    background-color: black;
+}
+.container .bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #    ,
+        0 0 0 10px #4fc3dc,
+        0 0 0 10px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 0 10px #ff2d75,
+    0 0 0 10px #ff2d75;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.container img{
+    max-width:100%;
+}
+.container h2{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: black;
+    color:white;
+    font-size: 3em;
+}
+.col{
+    float:left;
+    position: relative;
+    padding: 5px;
+}
+.card{
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+.col-4{
+    width:25%;
+}
+.col-3{
+    width:33.3%;
+}
+.col-2{
+    width:50%;
+}
+.col-1{
+    width:100%;
+    margin: auto;
+    text-align: center;
+}
+.box{
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.box .content{
+    padding:10px;
+    font-size: 1.4em;
+}
+.box .content::first-letter {
+    font-size: 2em;
+    
+}
+.box header{
+    background-color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    color:white;
+    line-height: 45px;
+    font-size: 2em;
+}
+.box footer{
+    background-color: #ddd;
+    text-align: center;
+    color:white;
+    line-height: 45px;
+    font-size: 1.2em;
+}
+/*Contact Form*/
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.mainForm {
+    padding: 25px;
+    background-color: #333;
+    color:white;
+    width: 50%;
+    margin: auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+/*Hero Section*/
+.hero{
+    color:white;
+    font-size: 1.5em;
+    background-color: #222;
+    text-align: center;
+    padding:20px;
+}
+.hero h1{
+    font-size: 3em;
+}
+.hero h2{
+    font-size: 2em;
+}
+    /*Gallery Hover*/
+.middle {
+  transition: 2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .middle {
+  opacity: 0.9;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/*End of Gallery Hover*/
+
+/*Buttons*/
+.bttn{
+    width: 80px;
+    background-color: black;
+    color: white;
+    height: 30px;
+}
+.bttn:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.btn {
+    background-color:#ddd;
+    color:#222;
+    font-size: 2em;
+    padding:10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:#ededed;
+}
+
+label{
+    text-align: left;
+    margin: 10px 0;
+    display: block;
+}
+#message{
+    height: 150px;
+}
+/*Footer Section*/
+#footer{
+    background-color: black;
+    color:white;
+    min-height: 200px;
+    padding: 20px;
+    display: block;
+    overflow: hidden;
+}
+.bottom h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+.bottom p{
+    text-align: center;
+    font-size: 1em;
+}
+/*End*/
+
+/*Scroll to top button*/
+.stt {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: lightgreen url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+  box-shadow: 0 0.25rem 0.5rem 0 gray;
+  opacity: 0.7;
+}
+.stt:hover{
+    background-color: darkgrey;
+    color: white;
+}
+:root {
+  scroll-behavior: smooth;
+}
+
+.stt:hover {
+  opacity: 0.8;
+}
+
+.stt:focus {
+  opacity: 0.9;
+}
+
+.stt:active {
+  opacity: 1;
+}
+/*End*/
+
+/*Start of Glowing socials*/
+.codetheworld-io{
+    display: flex;
+margin-left: 0px;
+}
+.codetheworld-io a {
+    margin: 1px;
+    border-radius: 50%;
+ box-sizing: border-box;
+    background: #fff;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-content:    center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    background: #2e3133;
+    color: var(--color);
+    font-size: 2.5em;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.codetheworld-io a:hover {
+    background: var(--color);
+    color: #050801;
+    box-shadow: 0 0 5px var(--color),
+        0 0 25px var(--color),
+        0 0 50px var(--color),
+        0 0 200px var(--color);
+}
+/*end of glowing socials*/
+
+/*Media Quarries*/
+@media all and (max-width:380px){
+    .mainHeader{
+        height: auto;
+    }
+    .logo {
+        float:none;
+        margin: 10px auto 20px;
+        display: block;
+    }
+    nav ul{
+        float:none;
+        display: block;
+        margin:0 auto;
+        text-align: center;
+    }
+    nav ul li{
+        float: initial;
+        display: inline-block;
+    }
+    nav ul li a{
+        padding: 0 15px;
+    }
+    .col-4{
+        width:100%;
+    }
+
+}
+
+@media all and (max-width:600px){
+    .col-3, .col-2{
+        width:100%;
+        margin: auto;
+        text-align: center;
+    }
+    .mainForm {
+        width: 100%;
+    }
+}
+/*End*/
+
+    </style>
+    <body>
+        <header class="header">
+            <div class="mainHeader">
+            <div class="logo"><img src="img/logo.png"></div>
+            <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Jobs</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+            </nav></div>
+        </header>
+        <div class="section sec" id="home">
+            <div class="hero">
+                <img src="img/zeedi.png" width="400px" height="100px">
+            <h1>Welcome to our Official site.</h1>
+            <h2>We are a humanitarian organisation that focuses on physically challenged 
+            people in Kenya and provide them with Job Opportunities based on their skillset</h2>
+            <div class="calltoaction">Take a look at who we are👇<br><br><a href="#about" >
+                <button style="background-color:lightgreen; color: black; height: 40px; 
+                width: 120px;" style="hover">About us
+            </button>
+        </a>
+    </div>
+        </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="bubbles">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    
+                   
+                </div>
+                <div><h2><img src="img/gall.jpg" height="35px">Gallery</h2></div>
+                <div class="col col-4">
+                    <div class="card">
+                    <img src="img/para.jpg">
+                    <p>The Zedi Parasports competition-2021</p>
+                </div>
+                </div>
+                <div class="col col-4">
+                    <div class="card">
+                        <img src="img/seminar.jpg">
+                        <p>The Zedi Special needs awareness seminar in Costal province branch-December,2021</p>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="card">
+                        <img src="img/team.jpg">
+                        <p>Monthly Team Building.</p>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="card">
+                        <img src="img/diss.jpg">
+                        <p>The Zedi Foundation Official Launch-2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section sec" id="gallery">
+            
+            <div class="container">
+                <div class="bubbles">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    
+                   
+                </div>
+                <div><h2>Available Job offers</h2></div>
+                <div class="col col-3">
+                    <img src="img/eyes.jpg" width="500PX" height="380PX">
+                    <div class="middle">
+                    <div class="text">
+                            <img src="img/hive.png">
+                            <p>We are currently looking for a blind individual with skills such as blog typing using the latest braille keyboard</p>
+                        <button class="bttn">Apply</button></div>
+                </div>
+                </div>
+                <div class="col col-3">
+                    <img src="img/bubu.jpg" width="500PX" height="380PX">
+                     <div class="middle">
+                    <div class="text">
+                            <img src="img/saf.png">
+                            <p>We are currently looking for an individual who can understand and also converse with fluent sign language(Post:Interpreter)</p>
+                        <button class="bttn">Apply</button></div>
+                </div>
+                </div>
+                <div class="col col-3">
+                    <img src="img/legs.jpg" width="500PX" height="380PX">
+                     <div class="middle">
+                    <div class="text">
+                            <img src="img/fox.jpg">
+                            <p>We are currently looking for a paralysed individual who has programming skills and atleast a Diploma in Information Techonolgy(IT)</p>
+                        <button class="bttn">Apply</button></div>
+                </div>
+                </div>
+                <div class="col col-3">
+                    <img src="img/autism.jpg" width="500PX" height="380PX">
+                     <div class="middle">
+                    <div class="text">
+                            <img src="img/chuo.png">
+                            <p>We are currently looking for a librarian and a book keeper</p>
+                        <button class="bttn">Apply</button></div>
+                </div>
+                </div>
+                <div class="col col-3">
+                    <img src="img/blind.jpg" width="500PX" height="380PX">
+                     <div class="middle">
+                    <div class="text">
+                            <img src="img/faiba.png">
+                            <p>We are currently conducting interviews for blind individuals with skills scuch as Customer Service and Guidance(Post;Customer Service) </p>
+                        <button class="bttn">Apply</button></div>
+                </div>
+                </div>
+                <div class="col col-3">
+                    <img src="img/bubuski.jpg" width="500PX" height="380PX"> <div class="middle">
+                    <div class="text">
+                            <img src="img/uber.png">
+                            <p>Uber has officialy allowed the posts of Mute Drivers and are currently looking for drivers(Minimum requirement:A Kenyan Driving License)</p>
+                        <button class="bttn">Apply</button></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="section sec" id="about">
+            <div class="container">
+                <div class="bubbles">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    
+                   
+                </div>
+                <div><h2>About us.</h2></div>
+                <div class="col col-2 ">
+                    <div class="box">
+                    <header>Our Mission</header>
+                    <div class="content">We have one vision,to show the world that Disability is not Inability,our goal is to ensure that we help all our esteemed members reach their maximum potential and to live with fellow people and live a normal life.We also focus on fitness and happiness of our members with frequent sport events and also pshycological sessions every end of month.</div>
+                    <footer></footer>
+                    </div>
+                </div>
+                <div class="col col-2 ">
+                    <div class="box">
+                    <header>Our History.</header>
+                    <div class="content">The Zedi foundation was founded by Abdullah Tayeb in 2023.He always had an idea that disability doesn't limit anyone to being the best versions of themselves,he started it as a small organisation a few years back and he is now an exiting prospect in the Digital Business World.</div>
+                    <footer></footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section sec" id="services">
+            <div class="container">
+                    <div class="bubbles">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    
+                   
+                </div>
+                <div><h2>Our Services</h2></div>
+                <div class="col col-1 ">
+                    <div class="box">
+                        <header>What we do....</header>
+                        <div class="content">At the Zedi organisation, we;
+                        <ul>
+                            <li>Find suitable jobs for members based on the valuation of their skillset📊.</li>
+                            <li>Help our members reach their maximum physical capacity💪.</li>
+                            <li>Have a Sports Centre with ✅ Verified trainers and coaches</li>
+                            <li>Do Pshycological treatment for members with mental issues🧑‍⚕️.</li>
+                            <li>Sponsor bright children with disabilities to study abroad✈️</li>
+                        </ul>
+                        </div>
+                         <footer><a href="#gallery"><button style="background-color: black; color: white; width: 1100px; height: 36px; font-size: 20px;">View Job Offers.</button></a></footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section sec" id="contact">
+            <div class="container">
+                <div class="bubbles">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    
+                   
+                </div>
+                <div><h2>Contact Us</h2></div>
+                <div class="col col-1 ">
+                    <div class="mainForm">
+                    <form action="mailto:test@gmail.com" method="POST" enctype="text/plain">
+                        <label for="username">Your Name</label>
+                        <input type="text" id="username" name="username" placeholder="Your Name">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="your email">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message"></textarea>
+                        <input type="submit" value="Submit" class="btn">
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="bubbles">
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:24;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:23;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:22;"></span>
+                    <span style="--i:25;"></span>
+                    <span style="--i:18;"></span>
+                    <span style="--i:21;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:26;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:28;"></span>
+                    
+                   
+                </div>
+                <div class="col col-4 bottom">
+                    <h3>Headquarters🏢</h3>
+                    <p>Find us at Karen,twiga tower,2nd floor.</p>
+                </div>
+                <div class="col col-4 bottom">
+                    <h3>Call Us📞</h3>
+                    <p>+254765432321</p>
+                </div>
+                <div class="col col-4 bottom">
+                    <h3>Our Motto</h3>
+                    <p>The only disabilty in life is a bad attitude</p>
+                </div>
+                <div class="col col-4 bottom">
+                    <h3>Add us.</h3>
+                    <div class="codetheworld-io">
+                <a href="#" style="--color: #0072b1">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" style="--color: purple;">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" style="--color: white;">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="#" style="--color: #4267B2">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+               </div>
+                </div>
+            </div>
+            <a href='#' class="stt" title="scroll to top"></a>
+        </footer>
+        <script>
+            
+        </script>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
